@@ -1,0 +1,100 @@
+/* pages/record/record.wxss */
+.box{
+  width: 100%;
+  height: auto;
+  overflow-x: hidden; 
+}
+.header{
+  overflow: hidden;
+  width: 100%;
+  height: 120rpx;
+  background-color: #333366;
+  color:white;
+}
+.headerTop{
+  width: 100%;
+  height: 50rpx;
+  color: #777777;
+  font-size: 26rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content:left;
+}
+.content{
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+  margin-bottom: 20rpx;
+}
+.year{
+  width: 20%;
+  height: 50rpx;
+ padding: 0 20rpx;
+}
+.headerBottom{
+  height: 50rpx;
+  width: 100%;
+  padding: 10rpx 20rpx;
+ color:white;
+ font-size: 40rpx;
+ display: flex;
+  }
+.headerBottom picker{
+  width: 20%;
+  border-right: 2rpx solid white;
+}
+.income{
+  width:30%;
+  text-align: center;
+}
+.expend{
+ width: 30%;
+ text-align: center;
+}
+.incomeNumber{
+  width: 30%;
+  text-align: center;
+  padding-left: 20rpx;
+}
+.expendNumber{
+    width: 30%;
+  text-align: center;
+}
+.recordListTop{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #777777;
+  font-size: 26rpx;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+  margin-top: 10rpx;
+  border-bottom: 2rpx solid #777777;
+}
+.recordListType{
+  padding-right: 20rpx;
+}
+.recordListDate{
+  padding-left: 20rpx;
+}
+.recordList{
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+  padding-bottom: 20rpx;
+}
+.recordListBottom{
+  height: 50rpx;
+   display: flex;
+   line-height: 50rpx;
+   margin-top: 5rpx;
+  flex-wrap: nowrap;
+  justify-content:space-between;
+}
+.category{
+  padding-left: 20rpx;
+}
+.money{
+  padding-right: 20rpx;
+}

@@ -1,0 +1,79 @@
+/* pages/recordDetail/recordDetail.wxss */
+.box{
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+.header{
+  background-color: #333366;
+  height: 200rpx;
+  width: 100%;
+  overflow: hidden;
+}
+.category{
+  margin: 0 auto;
+  width: 150rpx;
+  height: 150rpx;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.categoryText{
+  width: 100rpx;
+  margin: 10rpx auto;
+  font-size: 25rpx;
+  text-align: center;
+
+}
+.category image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+}
+.content{
+  width: 100%;
+  overflow: hidden;
+}
+.content-item{
+  width:100%;
+  overflow: hidden;
+  height: auto;
+  margin-top: 5rpx;
+  margin-left: 20rpx;
+  border-bottom: 2rpx solid #999;
+  float: left;
+}
+.title{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 35rpx;
+  float: left;
+  width: 20%;
+  text-align: center;
+  margin-right: 40rpx;
+  color: #777;
+}
+.desc{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 35rpx;
+}
+.remarks{
+  height: auto;
+  display: inline-block;
+  width: 60%;
+  line-height: 100rpx;
+  font-size: 35rpx;
+}
+.btnArea{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+}
+.btnArea button{
+  width: 50%;
+  float: left;
+  height: 100rpx;
+  background-color: white;
+}

@@ -1,0 +1,99 @@
+.box{
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.desc{
+  color: #999
+}
+.content{
+  width: 100%;
+  position: absolute;
+  bottom: bottom;
+  overflow: hidden;
+}
+
+.specific{
+  font-size: 40rpx;
+  display: flex;
+  width:500rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  color: #999;
+}
+.text{
+  font-size: 40rpx;
+  color: white;
+  float: right;
+}
+.balance{
+  margin: 0 auto;
+  width: 200rpx;
+}
+.specificItem{
+   height: 50rpx;
+   width: 249rpx;
+  line-height: 50rpx;
+  justify-content:space-between;
+  font-size: 30rpx;
+  text-align: left;
+  padding:0 10rpx;
+  display: flex;
+  
+}
+.specificItem:first-of-type{
+  border-right: 2rpx solid white;
+}
+.header{
+  width: 100%;
+  overflow: hidden;
+  height:250rpx;
+  background-color: #333366;
+ color: white;
+  font-size: 70rpx;
+  text-align: center;
+}
+.desc{
+  width: 60rpx;
+  margin: 0 auto;
+  font-size: 30rpx;
+}
+.btnarea{
+  display: flex;
+  width:200rpx;
+  height: 50rpx;
+  border: 2rpx solid white;
+  justify-content: flex-start;
+  border-radius: 20rpx;
+  overflow: hidden;
+  float: left;
+  padding: 0
+}
+.btnarea button{
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 100rpx;
+  color: white;
+  font-size: 35rpx;
+  border-radius: 0;
+  border:none;
+  margin: 0;
+}
+ button::after{border:none}
+
+.btnarea button:first-child{
+  border-right: 2rpx solid white;
+  border-radius: 0;
+}
+.time{
+  width: 20%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: white;
+}

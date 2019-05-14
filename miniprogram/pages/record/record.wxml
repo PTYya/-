@@ -1,0 +1,52 @@
+<!--pages/record/record.wxml-->
+<view class='box'>
+  <view class='header'>
+  <view class="headerTop">
+   <view class='year'>
+   {{selectedYear}} 年
+  </view>
+    <view class='income'>
+      收入
+    </view>
+    <view class='expend'>
+    支出
+    </view>
+  </view>
+  <view class='headerBottom'>
+      <picker mode="date" fields="month" start="2018-01" end="{{currentMonth}}" value="{{selectedMonth}}" bindchange="changeDate" >
+       {{selectedMonth}}月
+      </picker>
+      <view class='incomeNumber'>
+       {{income}}
+      </view>
+      <view class='expendNumber'>
+      {{expand}}
+      </view>
+  </view>   
+  </view>
+  <view class='content'>
+<view wx:for="{{recordLists}}" wx:key="{{recordLists.index}}" class='recordList' bindtap='toRecordDetail'
+    data-date="{{item.date}}" data-type='{{item.type}}' data-money='{{item.money}}' data-category='{{item.category}}'
+    data-remarks="{{item.remarks}}" data-id="{{item.id}}" data-usedeposit="{{item.usedeposit}}"
+  >
+    <view class="recordListTop">
+    <view class='recordListDate'>
+      {{item.date}}
+    </view>
+    <view class='recordListType'>
+     {{item.type}}:{{item.money}}
+    </view>
+    </view>
+    <view class='recordListBottom'>
+      <view class='category'>
+      {{item.category}}
+      </view>
+      <view class='money'>
+        <text wx:if="{{item.type=='收入'}}">+</text>
+        <text wx:if="{{item.type=='支出'}}">-</text>
+        {{item.money}}
+      </view>
+    </view>
+  </view>
+  </view> 
+</view>

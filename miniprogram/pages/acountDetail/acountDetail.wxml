@@ -1,0 +1,53 @@
+<!--pages/acountDetail/acountDetail.wxml-->
+<view class='header'>
+<picker mode="multiSelector" range="{{multiArray}}" value="{{multiIndex}}" 
+range-key='{{"desc"}}'
+ bindchange="bindMultiPickerChange"
+  bindcolumnchange="bindMultiPickerColumnChange"
+  class='categoryPicker'>
+<image src='{{categories.imgUrl}}' mode='aspectFit'
+ class="categoryPic"
+>
+</image>
+    <text>{{categories.desc}} </text>
+</picker>
+<picker mode="date"
+start="2018-01-01"
+end="{{todaydate}}"
+value='{{slectedDate}}'
+ class='datePicker'
+ bindchange="changeDate">
+  {{selectedDate}}
+</picker>
+</view>
+<form bindsubmit="formSubmit">
+<view class='numberInput'>
+  <input type='digit'
+    placeholder='输入金额'
+    bindinput='inputNumber'
+    value='{{money}}'
+    maxlength='10'
+  ></input>
+ <text wx:if="{{showYuan}}">元</text>
+</view>
+<view>
+<view class='remarks'>
+  <textarea name="remarks" value="{{remarks}}" placeholder='备注' show-confirm-bar="false" auto-height auto-focus='false' maxlength="50">
+
+  </textarea>
+</view>
+<view class='usedeposits'>
+<view  wx:if="{{type==='支出'}}" class='radiotext b'>
+  是否使用存款
+</view>
+<radio-group wx:if="{{type==='支出'}}" bindchange="radioChange">
+  <radio value='true'>使用</radio>
+  <radio value='false'checked>不使用</radio>
+</radio-group>
+</view>
+</view>
+  <view class="btnarea">
+      <button form-type="reset">重置</button>
+    <button form-type="submit">完成</button>
+  </view>
+</form>

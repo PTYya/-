@@ -1,0 +1,50 @@
+<!--pages/newchart/newchart.wxml-->
+<view class='box'>
+<view class='header'>
+<view class='btnarea'>
+<button bindtap='tomonth' plain='true' style="background:{{background1}}">月</button>
+<button bindtap='toyear' plain='true'style="background:{{background}}">年</button>
+</view>
+  <view class='desc'>
+    结余
+  </view>
+   <view class="balance">
+    {{balance}}
+   </view>
+  <view class='specific'>
+    <view class='specificItem'>
+    <view>
+      收入
+    </view>
+     <view class='text'>
+           {{income}}
+   </view>
+    </view>
+    <view class='specificItem'>
+    <view >
+      支出
+    </view>
+    <view class='text'>
+     {{pay}}
+    </view>
+    </view>
+    <view  class='time' wx:if="{{ismonth==true}}">
+        <picker mode="date" fields="month" start="2018-01" end="{{currentDate}}" value="{{selectedMonth}}" bindchange="changeDate" >
+       {{selectedMonth}}月
+      </picker>
+    </view>
+    <view class='time' wx:else>
+       <picker mode="date" fields="year" start="2018-01" end="{{currentYear}}" value="{{selectedYear}}" bindchange="changeYear" >
+       {{selectedYear}}年
+      </picker>
+    </view>
+  </view>
+</view>
+<view class='content' style='height:{{second_height}}px'>
+<view  style='height:{{second_height}}px;width:800rpx' >
+    <ec-canvas id="mychart-one" canvas-id="mychart-multi-one" ec="{{ecOne}}"></ec-canvas>  
+</view>
+</view>
+</view>
+
+

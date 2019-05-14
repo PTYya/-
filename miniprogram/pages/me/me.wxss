@@ -1,0 +1,80 @@
+/* pages/me/me.wxss */
+.usermsg{
+  height: 500rpx;
+  width: 100%;
+  background-color: #333366;
+  color: white;
+}
+.avatar{
+  width: 150rpx;
+  margin: 0 auto;
+  height: 150rpx;
+  border: 0rpx solid ;
+  border-radius:600rpx;
+  overflow: hidden;
+}
+.nickname{
+  text-align: center;
+}
+.money{
+  width: 100%;
+  margin: 10rpx;
+}
+.saved{
+  width: 150rpx;
+  margin:10rpx;
+  float:left;
+  padding: 25rpx;
+ text-align: center;
+}
+.saved text{
+  font-weight: 600;
+}
+.aim{
+  width: 150rpx;
+  margin:10rpx;
+  float:right;
+  padding: 25rpx;
+ text-align: center;
+}
+.aim text{
+  font-weight: 600;
+}
+.slider{
+  width: 100%;
+  float: left;
+}
+.setAim{
+  background-color: #ffffff;
+}
+ 
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+ 
+.header image {
+    width: 300rpx;
+    height:300rpx;
+}
+ 
+.content {
+    margin-left: 50rpx;
+    margin-bottom: 90rpx;
+}
+ 
+.content text {
+    display: block;
+    color: #9d9d9d;
+    margin-top: 40rpx;
+}
+ 
+.bottom {
+    border-radius: 80rpx;
+    margin: 70rpx 50rpx;
+    font-size: 35rpx;
+}

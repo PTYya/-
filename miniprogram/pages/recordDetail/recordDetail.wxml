@@ -1,0 +1,65 @@
+<!--pages/recordDetail/recordDetail.wxml-->
+<view class='box'>
+<view class='header'>
+  <view class='category'>
+    <image mode='aspectFit' src="{{picUrl}}">
+    </image>
+   <view class='categoryText'>
+     {{category}}
+   </view>
+  </view>
+</view>
+<view class='content'>
+<view class='content-item'>
+  <view class='title'>
+      类型
+  </view>
+  <view class='desc'>
+    {{type}}
+  </view>
+</view>
+<view class='content-item'>
+  <view class='title'>
+      日期
+  </view>
+  <view class='desc'>
+    {{date}}
+  </view>
+</view>
+<view class='content-item'>
+  <view class='title'>
+      金额
+  </view>
+  <view class='desc'>
+    {{money}}
+  </view>
+</view>
+<view wx:if="{{type=='支出'}}"class='content-item'>
+  <view class='title'>
+      使用存款
+  </view>
+  <view wx:if="{{usedeposit=='false'}}" class='desc'>
+    否
+  </view>
+  <view wx:if="{{usedeposit=='true'}}" class='desc'>
+    是
+  </view>
+</view>
+<view class='content-item'>
+  <view class='title'>
+      备注
+  </view>
+  <view class='remarks'>
+    {{remarks}}
+  </view>
+</view> 
+<view class='btnArea'>
+  <button bindtap='toEdit'>
+  编辑
+  </button>
+  <button bindtap='removeRecord'>
+    删除
+  </button>
+</view>
+</view>
+</view>

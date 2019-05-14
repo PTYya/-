@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/me/me",
+    "pages/newchart/newchart",  
+    "pages/record/record",
+    "pages/acountDetail/acountDetail", 
+    "pages/recordDetail/recordDetail",
+    "pages/editRecord/editRecord"
+  ],
+  "window": {
+    "backgroundColor": "#333366",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333366",
+    "navigationBarTitleText": "芋圆小金库",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "pagePath":"pages/acountDetail/acountDetail",
+        "text":"记账",
+        "iconPath":"./images/acount.png",
+        "selectedIconPath":"./images/selectedAcount.png"
+      },
+      {
+          "pagePath": "pages/record/record",
+          "text": "记录",
+          "iconPath": "./images/record.png",
+          "selectedIconPath": "./images/selectedRecord.png"
+       },
+      {
+          "pagePath": "pages/newchart/newchart",
+          "text": "图表",
+          "iconPath": "./images/chart.png",
+          "selectedIconPath": "./images/selectedChart.png"
+      },
+      {
+        "pagePath":"pages/me/me",
+        "text":"我的",
+        "iconPath": "./images/me.png",
+        "selectedIconPath":"./images/selectedMe.png"
+      }
+    ]
+  }
+}

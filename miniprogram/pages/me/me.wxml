@@ -1,0 +1,83 @@
+  <!--pages/me/me.wxml-->
+<view wx:if="{{isHide}}">
+    <view wx:if="{{canIUse}}" >
+        <view class='header'>
+            <image src='/images/logo.jpg'></image>
+        </view>
+        <view class='content'>
+            <view>申请获取以下权限</view>
+            <text>获得你的公开信息(昵称，头像等)</text>
+        </view>
+        <button class='bottom' type='primary' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo">
+            授权登录
+        </button>
+    </view>
+    <view wx:else>请升级微信版本</view>
+</view>
+<view wx:else>
+<view class='usermsg'>
+  <view class='avatar'>
+   <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class='nickname'>
+  <open-data type="userNickName"></open-data>
+  </view>
+  <view class='money'>
+  <view class="saved">
+    存款
+    <text>
+    {{deposit}}
+    </text>
+  </view>
+   <view class="aim">
+    目标
+    <text wx:if="{{aim==''}}" style="font-size:35rpx">
+      未设置
+    </text>
+    <text wx:else>
+    {{aim}}
+    </text>
+  </view>
+  </view>
+  <view class='slider'>
+      <progress  percent='{{percent}}'
+        activeColor='#ff3300'
+        disabled='true'>  
+        </progress>
+  </view>
+</view>
+<!-- 设置目标金额按钮 -->
+<view>
+
+</view>
+<view class='setAim'>
+<button
+wx:if="{{!showinput}}"
+plain='true'
+ bindtap='showinput'>
+  设置目标
+</button>
+<button
+wx:if="{{showinput}}"
+plain='true'
+ bindtap='setComplete'>
+  完成设置
+</button>
+</view>
+<input wx:if="{{showinput}}"
+type="number"
+auto-focus='true'
+  placeholder='请输入目标金额'
+  bindinput='changeAim'
+>
+
+</input>
+<!-- 需要使用 button 来授权登录 -->
+<button
+  wx:if="{{!canIUse}}"
+  open-type="getUserInfo"
+  bindgetuserinfo="bindGetUserInfo"
+>
+  授权登录
+</button>
+</view>
